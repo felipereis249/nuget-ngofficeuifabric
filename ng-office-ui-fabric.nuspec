@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ng-office-ui-fabric</id>
+    <version>0.4.1</version>
+    <title>Angular Directives for Office UI Fabric</title>
+    <authors>The ngOfficeUiFabric Team</authors>
+    <owners>Andrew Connell</owners>
+    <licenseUrl>https://github.com/ngOfficeUIFabric/ng-officeuifabric/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ngOfficeUIFabric/ng-officeuifabric</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ngofficeuifabric/ng-officeuifabric/master/assets/ngOfficeUiFabric.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Angular 1.x directives for the Office UI Fabric. Note you will need to also acquire (via NuGet or by referencing from a CDN) the Angular JS libraries and Office UI Fabric CSS for these to work.</description>
+    <copyright>2016</copyright>
+    <tags>office office ui fabric fabric angular angularjs</tags>
+    <dependencies>
+      <dependency id="AngularJS.Core" version="1.4.9" />
+      <dependency id="OfficeUIFabric" version="2.0.1" />
+    </dependencies>
+  </metadata>
+</package>
