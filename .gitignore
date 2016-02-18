@@ -1,1 +1,15 @@
-.DS_Store
+**/.DS_Store
+**/npm-debug.log
+
+# no need to keep stuff pulled remotely
+node_modules
+
+# built distros
+dist/
+
+# no js, just typescript
+*.js
+*.js.map
+
+# except
+!content/Scripts/**/*.js
