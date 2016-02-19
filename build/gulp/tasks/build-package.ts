@@ -5,6 +5,9 @@ import * as gulp from 'gulp';
 import {BuildConfig} from '../../../config/build';
 import {Utils} from '../utils';
 import * as yargs from 'yargs';
+import * as archiver from 'archiver';
+import * as fs from 'fs';
+import * as path from 'path';
 let $: any = require('gulp-load-plugins')({ lazy: true });
 
 /**
@@ -35,13 +38,34 @@ export class GulpTask extends BaseGulpTask {
   constructor(done: IVoidCallback) {
     super();
     Utils.log('Building NuGet package');
-    
-    // try this https://github.com/cthackers/adm-zip/wiki/ADM-ZIP-Introduction
 
-    // return gulp.src(BuildConfig.NUGET_PACKAGE_CONTENTS, { base: '.' })
-    //   .pipe($.if(this._args.verbose, $.print()))
-    //   .pipe($.zip('nuget.zip'))
-    //   .pipe(gulp.dest('dist'));
+    let currentFolder: string = path.join(__dirname, '../../..');
+    let nugetPackage: string = path.join(currentFolder,
+                                         BuildConfig.OUTPUT_PATH,
+                                         BuildConfig.NUGET_PACKAGE_NAME);
+
+    // if dist doesn't exist, create it
+    if (!fs.existsSync(path.join(currentFolder, BuildConfig.OUTPUT_PATH))) {
+      fs.mkdirSync(path.join(currentFolder, BuildConfig.OUTPUT_PATH));
+    }
+
+    // create zip package
+    let zip: any = archiver('zip');
+    let output: fs.WriteStream = fs.createWriteStream(nugetPackage);
+    zip.pipe(output);
+
+    // add files to package
+    BuildConfig.NUGET_PACKAGE_CONTENTS.forEach((file: string) => {
+      let fileToAdd: string = path.join(currentFolder, file);
+      zip.append(fileToAdd, {
+        name: file
+      });
+    });
+
+    // finalize & close out zip
+    zip.finalize();
+
+    done();
   }
 
 }

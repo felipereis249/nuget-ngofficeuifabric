@@ -16,8 +16,9 @@ export class BuildConfig {
     'ng-office-ui-fabric.nuspec',
     '[Content_Types].xml',
     '_rels/.rels',
-    'content/**/*',
-    'package/**/*'
+    'content/Scripts/ngOfficeUiFabric.js',
+    'content/Scripts/ngOfficeUiFabric.min.js',
+    'package/services/metadata/core-properties/936a953a4fe84d12aaa89c44f6147f5b.psmdcp'
   ];
   // build library paths
   public static OUTPUT_PATH: string = BuildConfig.ROOT + '/dist';

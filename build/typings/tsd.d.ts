@@ -12,3 +12,4 @@
 /// <reference path="gulp-tslint/gulp-tslint.d.ts" />
 /// <reference path="chalk/chalk.d.ts" />
 /// <reference path="through2/through2.d.ts" />
+/// <reference path="archiver/archiver.d.ts" />

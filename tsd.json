@@ -46,6 +46,9 @@
     },
     "through2/through2.d.ts": {
       "commit": "99c4fb76b5d941939ba53e61d0daee4bd74f150f"
+    },
+    "archiver/archiver.d.ts": {
+      "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"
     }
   }
 }
