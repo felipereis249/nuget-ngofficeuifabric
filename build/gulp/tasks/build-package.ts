@@ -1,7 +1,6 @@
 'use strict';
 
 import {BaseGulpTask} from '../BaseGulpTask';
-import * as gulp from 'gulp';
 import {BuildConfig} from '../../../config/build';
 import {Utils} from '../utils';
 import * as yargs from 'yargs';
@@ -44,7 +43,7 @@ export class GulpTask extends BaseGulpTask {
                                          BuildConfig.OUTPUT_PATH,
                                          BuildConfig.NUGET_PACKAGE_NAME);
 
-    // if dist doesn't exist, create it
+    // if dist folder doesn't exist, create it
     if (!fs.existsSync(path.join(currentFolder, BuildConfig.OUTPUT_PATH))) {
       fs.mkdirSync(path.join(currentFolder, BuildConfig.OUTPUT_PATH));
     }
@@ -57,8 +56,9 @@ export class GulpTask extends BaseGulpTask {
     // add files to package
     BuildConfig.NUGET_PACKAGE_CONTENTS.forEach((file: string) => {
       let fileToAdd: string = path.join(currentFolder, file);
+      let filePathInArchive: string = file.replace('src/', '');
       zip.append(fileToAdd, {
-        name: file
+        name: filePathInArchive
       });
     });
 

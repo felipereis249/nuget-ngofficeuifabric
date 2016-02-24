@@ -13,16 +13,25 @@ export class BuildConfig {
 
   // files & paths to include in nuget package
   public static NUGET_PACKAGE_CONTENTS: string[] = [
-    'ng-office-ui-fabric.nuspec',
-    '[Content_Types].xml',
-    '_rels/.rels',
-    'content/Scripts/ngOfficeUiFabric.js',
-    'content/Scripts/ngOfficeUiFabric.min.js',
-    'package/services/metadata/core-properties/936a953a4fe84d12aaa89c44f6147f5b.psmdcp'
+    'src/[Content_Types].xml',
+    'src/ng-office-ui-fabric.nuspec',
+    'src/_rels/.rels',
+    'src/content/Scripts/ngOfficeUiFabric.js',
+    'src/content/Scripts/ngOfficeUiFabric.min.js',
+    'src/package/services/metadata/core-properties/936a953a4fe84d12aaa89c44f6147f5b.psmdcp'
   ];
+
   // build library paths
   public static OUTPUT_PATH: string = BuildConfig.ROOT + '/dist';
   public static NUGET_PACKAGE_NAME: string = 'ng-office-ui-fabric.' + BuildConfig.VERSION + '.nupkg';
+
+  /*
+   * JavaScript files
+   */
+  public static BUILD_JS: string[] = [
+    BuildConfig.BUILD_PATH + '/**/*.js',
+    'gulpfile.js'
+  ];
 
   /*
    * TypeScript files

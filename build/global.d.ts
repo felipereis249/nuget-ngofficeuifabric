@@ -23,19 +23,12 @@ interface IStringCallback {
  *
  * @typedef commandLineArgs
  * @type {Object}
- * @property {boolean}  debug     - Flag if Node process should start in debug mode.
- * @property {boolean}  specs     - Flag indicating if the tests should be written to the console.
- * @property {boolean}  verbose   - Flag if tasks should output verbose messages to console.
- * @property {number}   version   - Version number to use in building library, overriding what's in package.json.
- * @property {boolean}  dev       - Flag indicating if development package should be created (unminified, with comments and sourcemaps)
+ * @property {string=}  nugetApiKey - NuGet API Key used to upload a package.
+ * @property {string=}  pkgPath - Fully qualified path to the NuGet package.
+ * @property {boolean=}  verbose   - Flag if tasks should output verbose messages to console.
  */
 interface ICommandLineArgs {
-  debug?: boolean;
-  specs?: boolean;
+  nugetApiKey?: string;
+  pkgPath?: string;
   verbose?: boolean;
-  version?: number;
-  dev?: boolean;
-  watch?: boolean;
-  serve?: boolean;
-  file?: string;
 }

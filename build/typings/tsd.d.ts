@@ -13,3 +13,6 @@
 /// <reference path="chalk/chalk.d.ts" />
 /// <reference path="through2/through2.d.ts" />
 /// <reference path="archiver/archiver.d.ts" />
+/// <reference path="run-sequence/run-sequence.d.ts" />
+/// <reference path="request/request.d.ts" />
+/// <reference path="form-data/form-data.d.ts" />

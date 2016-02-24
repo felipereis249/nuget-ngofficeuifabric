@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" 
-                xmlns:dcterms="http://purl.org/dc/terms/" 
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-                xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
+<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
   <dc:creator>The ngOfficeUiFabric Team</dc:creator>
   <dc:description>Angular 1.x directives for the Office UI Fabric. Note you will need to also acquire (via NuGet or by referencing from a CDN) the Angular JS libraries and Office UI Fabric CSS for these to work.</dc:description>
   <dc:identifier>ng-office-ui-fabric</dc:identifier>
-  <version>0.4.1</version>
+  <version>0.5.0</version>
   <keywords>office,office ui fabric,fabric,angular,angularjs</keywords>
   <dc:title>Angular Directives for Office UI Fabric</dc:title>
   <dc:subject>NuGet Package Explorer</dc:subject>

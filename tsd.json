@@ -49,6 +49,15 @@
     },
     "archiver/archiver.d.ts": {
       "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"
+    },
+    "run-sequence/run-sequence.d.ts": {
+      "commit": "c05461d7571595cd3bf978eaca9a27e938518db0"
+    },
+    "request/request.d.ts": {
+      "commit": "193bbd4d668520b3c20a7972b211e9a082e8db8b"
+    },
+    "form-data/form-data.d.ts": {
+      "commit": "193bbd4d668520b3c20a7972b211e9a082e8db8b"
     }
   }
 }
