@@ -11,13 +11,9 @@ build: off
 test: off
 deploy_script:
 - cmd: >-
-    del src\[Content_Types].xml /q
-
-    del src\_rels /q
-
-    del src\package /q
-
     nuget pack src/ng-office-ui-fabric.nuspec
+
+    appveyor PushArtifact *.nupkg
 
     nuget push *.nupkg -apikey %NUGET_API_KEY%
 notifications:
