@@ -3,7 +3,7 @@
  * http://ngofficeuifabric.com
  * Angular 1.x directives for Microsoft's Office UI Fabric
  * https://angularjs.org & https://dev.office.com/fabric
- * v0.5.1
+ * v0.5.0
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')

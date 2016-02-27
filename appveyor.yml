@@ -1,0 +1,30 @@
+version: 0.5.0.{build}
+branches:
+  only:
+  - master
+os: Windows Server 2012 R2
+clone_depth: 2
+environment:
+  NUGET_API_KEY:
+    secure: ok1WGABuuxH/jTZDQZ3KftaRyDSxH9ZGcjrL7hXlzlFOghKpYEOnfAWlaJuk5DnT
+build: off
+test: off
+deploy_script:
+- cmd: >-
+    del src\[Content_Types].xml /q
+
+    del src\_rels /q
+
+    del src\package /q
+
+    nuget pack src/ng-office-ui-fabric.nuspec
+
+    nuget push *.nupkg -apikey %NUGET_API_KEY%
+notifications:
+- provider: Slack
+  incoming_webhook: https://hooks.slack.com/services/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
+  channel: code
+  template: AppVeyor used to publish a new release to NuGet
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: true
