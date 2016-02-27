@@ -13,8 +13,6 @@ deploy_script:
 - cmd: >-
     nuget pack src/ng-office-ui-fabric.nuspec
 
-    appveyor PushArtifact *.nupkg
-
     nuget push *.nupkg -apikey %NUGET_API_KEY%
 notifications:
 - provider: Slack
