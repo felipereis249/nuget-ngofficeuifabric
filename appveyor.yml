@@ -14,7 +14,7 @@ deploy_script:
 - cmd: >-
     nuget pack src/ng-office-ui-fabric.nuspec
 
-    nuget push *.nupkg -apikey %NUGET_API_KEY%
+    nuget push *.nupkg -apikey %NUGET_API_KEY% -source https://api.nuget.org/v3/index.json
 notifications:
   - provider: Slack
     incoming_webhook: https://hooks.slack.com/services/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
