@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Angular 1.x directives for the Office UI Fabric. Note you will need to also acquire (via NuGet or by referencing from a CDN) the Angular JS libraries and Office UI Fabric CSS for these to work.</description>
     <copyright>2016</copyright>
-    <tags>office office ui fabric fabric angular angularjs</tags>
+    <tags>office ui fabric officeuifabric OfficeUIFabric ngOfficeUIFabric ngofficeuifabric angular angularjs</tags>
     <dependencies>
       <dependency id="AngularJS.Core" version="1.5.8"/>
       <dependency id="OfficeUIFabric" version="2.6.2"/>
