@@ -1,0 +1,24 @@
+{
+  "name": "nuget-ngofficeuifabric",
+  "description": "Angular directives for Microsoft's Office UI Fabric.",
+  "version": "0.12.11",
+  "author": "https://github.com/ngOfficeUIFabric/ng-officeuifabric/graphs/contributors",
+  "maintainers": [
+    {
+      "name": "andrewconnell",
+      "email": "me@andrewconnell"
+    }
+  ],
+  "scripts": {
+    "test": "echo no tests to run"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ngOfficeUIFabric/nuget-ngofficeuifabric#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngOfficeUIFabric/nuget-ngofficeuifabric.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngOfficeUIFabric/nuget-ngofficeuifabric/issues"
+  }
+}
