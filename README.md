@@ -43,7 +43,7 @@ bower install ng-office-ui-fabric --save
 Install-Package ng-office-ui-fabric
 ```
 
-> Please note that ngOfficeUiFabric requires **Angular 1.4.9** or higher & **Office UI Fabric 2.0.x** or higher.
+> Please note that ngOfficeUiFabric requires **AngularJS 1.6.5** or higher & **Office UI Fabric 2.6.3**.
 
 ## CDN
 
